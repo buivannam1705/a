@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+       oninput="In(this.value)"
+       onchange="In(this.value)">
+<p>Celsius: <span id="outputCelsius"></span></p>
+</body>
+<script>
+  function In(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+  }
+</script>
+</html>
